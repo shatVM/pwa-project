@@ -34,6 +34,8 @@ const arrayOfLoveWishes = [
     "Нехай кохання буде безмежним, як небо, і яскравим, як зорі!"
 ]
 
+let countOfHearts = 5;
+document.getElementById ('count-of-hearts').innerText = '🧡'.repeat(countOfHearts)
 
 document.getElementById('btn_love_wishes').addEventListener('click', () => {
     
@@ -44,5 +46,26 @@ document.getElementById('btn_love_wishes').addEventListener('click', () => {
     console.log('Номер елементу масиву - ', index);
 
     document.getElementById ('p_love-wishes').innerText = arrayOfLoveWishes[index];  
+    //При кожному кліку на кнопку зменшуємо лічильник на 1 і відображаємо у форматі 🧡🧡🤍🤍🤍
+    countOfHearts--;
+    document.getElementById ('count-of-hearts').innerText = '🧡'.repeat(countOfHearts) + '🤍'.repeat(5 - countOfHearts);
+    if (countOfHearts === 0) {
+      //Якщо лічильник доходить до 0, то кнопку ховаємо
+      document.getElementById('btn_love_wishes').style.display = 'none';
+      document.getElementById ('p_love-wishes').innerText = 'Придбайте 🧡';
+
+      //  document.getElementById('btn_love_wishes').style.display = none;
+    }  
+    
+   
 })
+
+let byeHearts = document.getElementById('byeHearts');
+byeHearts.addEventListener('click', () => {
+  countOfHearts = 5;
+  document.getElementById ('count-of-hearts').innerText = '🧡'.repeat(countOfHearts);
+  document.getElementById('btn_love_wishes').style.display = 'block';
+  document.getElementById ('p_love-wishes').innerText = '';
+})
+
 
