@@ -121,10 +121,16 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   color: #999999;
+  
+}
+.footer-menu {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
 }
 
-
-.site-footer p {
+.footer-menu p {
   margin: 0;
   border: 1px solid #cccccc;
   border-radius: 10px 0; 
