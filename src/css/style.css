@@ -10,9 +10,9 @@ body {
 /*  на мобільних відображати на всю ширину екрану    */
 @media (max-width: 480px) {
   .container {
-    margin: 5px;
+    margin: 20px;
     width: 100%;
-    height: 100%;
+    height: 90vh;
   }
 }
 
