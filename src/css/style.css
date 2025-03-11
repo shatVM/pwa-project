@@ -7,7 +7,7 @@ body {
   line-height: 18px;
   color: #000000;
   background: #fff8f8 url("") no-repeat 50% 0;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
