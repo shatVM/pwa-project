@@ -51,8 +51,10 @@ document.getElementById('btn_love_wishes').addEventListener('click', () => {
     document.getElementById ('count-of-hearts').innerText = '🧡'.repeat(countOfHearts) + '🤍'.repeat(5 - countOfHearts);
     if (countOfHearts === 0) {
       //Якщо лічильник доходить до 0, то кнопку ховаємо
-      document.getElementById('btn_love_wishes').style.display = 'none';
-      document.getElementById ('p_love-wishes').innerText = 'Придбайте 🧡';
+      document.getElementById('btn_love_wishes').disabled = true;
+      document.getElementById('btn_love_wishes').style.backgroundColor = "lightgrey";
+      document.getElementById('btn_love_wishes').style.color = "grey";
+      document.getElementById ('btn_love_wishes').innerText = 'Придбайте 🧡';
 
       //  document.getElementById('btn_love_wishes').style.display = none;
     }  
@@ -64,7 +66,10 @@ let byeHearts = document.getElementById('byeHearts');
 byeHearts.addEventListener('click', () => {
   countOfHearts = 5;
   document.getElementById ('count-of-hearts').innerText = '🧡'.repeat(countOfHearts);
-  document.getElementById('btn_love_wishes').style.display = 'block';
+  document.getElementById('btn_love_wishes').disabled = false;
+  document.getElementById('btn_love_wishes').style.backgroundColor = " #ff5a26";
+  document.getElementById('btn_love_wishes').style.color = "#ffc5b3";
+  document.getElementById ('btn_love_wishes').innerText = 'Отримати побажання';
   document.getElementById ('p_love-wishes').innerText = '';
 })
 
